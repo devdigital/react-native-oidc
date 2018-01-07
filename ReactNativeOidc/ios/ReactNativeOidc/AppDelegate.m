@@ -11,6 +11,7 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import "AppAuth.h"
 
 @implementation AppDelegate
 
@@ -32,6 +33,16 @@
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;
+}
+
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<NSString *, id> *)options {
+  if ([_currentAuthorizationFlow resumeAuthorizationFlowWithURL:url]) {
+    _currentAuthorizationFlow = nil;
+    return YES;
+  }
+  return NO;
 }
 
 @end

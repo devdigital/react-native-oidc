@@ -3492,6 +3492,10 @@ react-devtools-core@^2.5.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-app-auth@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-app-auth/-/react-native-app-auth-1.0.1.tgz#7e19fa2607164a7dbe05829db962538fe3daece3"
+
 react-native@0.51.0:
   version "0.51.0"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.51.0.tgz#fe25934b3030fd323f3ca1a70f034133465955ed"
